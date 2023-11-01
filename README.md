@@ -7,10 +7,12 @@
     - Install LTS version from <https://nodejs.org/>
 - Docker Desktop
   - Download from <https://www.docker.com/products/docker-desktop/>
+- Clone this repo
+  - `git clone https://github.com/keawade/npm-network-test.git`
 
 ## Steps to reproduce on bare metal
 
-Run the following command
+Run the following command in the cloned repo
 
 ```bash
 npm install
@@ -23,7 +25,7 @@ Expectation: Command should exit without error within 5-10 minutes.
 This version experiences the same issue but much more acutely than on bare
 metal.
 
-Run the following command
+Run the following command in the cloned repo
 
 ```bash
 docker build . -t npm-network-test
