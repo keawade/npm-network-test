@@ -1,5 +1,8 @@
 # npm + Network Test
 
+This is a reproduction repo of a very baffling issue I've been experiencing on a
+specific macOS device.
+
 ## Prerequisites
 
 - npm
@@ -15,10 +18,14 @@
 Run the following command in the cloned repo
 
 ```bash
-npm install
+npm install --cache /tmp/empty-cache
 ```
 
 Expectation: Command should exit without error within 5-10 minutes.
+
+If any files were created during a test run, run
+`rm -rf node_modules/ package-lock.json /tmp/emtpy-cache` to reset the
+environment.
 
 ## Steps to reproduce in Docker
 
